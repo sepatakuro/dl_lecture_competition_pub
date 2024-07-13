@@ -410,10 +410,10 @@ def main():
 #    criterion = nn.MSELoss()
 
 
-    #optimizer = torch.optim.Adam(model.parameters(), lr=0.0001, weight_decay=1e-5)
-    lr = 0.001
-    optimizer = torch.optim.AdamW(model.parameters(), lr=lr)
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=num_epoch, eta_min=lr*0.00001)
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.0001, weight_decay=1e-5)
+    #lr = 0.001
+    #optimizer = torch.optim.AdamW(model.parameters(), lr=lr)
+    #scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=num_epoch, eta_min=lr*0.00001)
 
     # train model
     for epoch in range(num_epoch):
